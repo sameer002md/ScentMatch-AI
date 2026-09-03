@@ -1,0 +1,1615 @@
+/* =========================================
+   SCENTMATCH AI - DASHBOARD
+========================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(224, 192, 145, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(154, 123, 78, 0.12),
+      transparent 32%
+    ),
+    #f7f4ee;
+
+  color: #24211e;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.main-nav {
+  width: 100%;
+
+  min-height: 108px;
+
+  padding: 0 7%;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-bottom:
+    1px solid #e5ddd2;
+
+  background:
+    rgba(247, 244, 238, 0.92);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
+
+  color: #24211e;
+
+  min-width: 220px;
+}
+
+
+.brand-mark {
+  width: 56px;
+
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #24211e;
+
+  color: #c8a574;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 12px 25px
+    rgba(50, 40, 30, 0.12);
+}
+
+
+.brand-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.brand-text b {
+  font-size: 24px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+}
+
+
+.brand-text small {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #9a7b4e;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 40px;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #625c55;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.nav-links a:hover {
+  color: #9a7b4e;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   AI ASSISTANT BUTTON
+========================================= */
+
+.nav-ai-link {
+  background:
+    transparent;
+
+  border:
+    1px solid #d8cfc3;
+
+  border-radius: 15px;
+
+  padding:
+    14px 23px;
+
+  color: #514a43;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.nav-ai-link:hover {
+  background: #ffffff;
+
+  border-color: #9a7b4e;
+
+  color: #9a7b4e;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================
+   NAVIGATION ACTIONS
+========================================= */
+
+.nav-actions {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  min-width: 240px;
+}
+
+
+/* =========================================
+   ADMIN BUTTON
+========================================= */
+
+.nav-admin {
+  background: #24211e;
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding:
+    15px 24px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.nav-admin:hover {
+  background: #9a7b4e;
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 25px
+    rgba(80, 59, 27, 0.15);
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-btn {
+  background:
+    transparent;
+
+  border:
+    1px solid #ded4c7;
+
+  border-radius: 14px;
+
+  padding:
+    14px 20px;
+
+  color: #292522;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.logout-btn:hover {
+  background: #24211e;
+
+  border-color: #24211e;
+
+  color: #ffffff;
+
+  transform:
+    translateY(-3px);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.dashboard-page main {
+  width: 100%;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  min-height: 760px;
+
+  padding:
+    95px 8% 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HERO COPY
+========================================= */
+
+.hero-copy {
+  max-width: 760px;
+}
+
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 0 0 30px;
+
+  color: #947345;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+}
+
+
+.hero-copy h1 {
+  margin: 0;
+
+  font-size:
+    clamp(62px, 7vw, 112px);
+
+  line-height: 0.95;
+
+  letter-spacing: -5px;
+
+  font-weight: 900;
+
+  color: #24211e;
+}
+
+
+.hero-copy h1 span {
+  color: #9a7b4e;
+}
+
+
+.hero-text {
+  max-width: 650px;
+
+  margin:
+    38px 0 0;
+
+  color: #6d655e;
+
+  font-size: 19px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   HERO ACTIONS
+========================================= */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 38px;
+}
+
+
+.primary-btn {
+  border: none;
+
+  border-radius: 15px;
+
+  padding:
+    20px 28px;
+
+  background: #24211e;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.primary-btn:hover {
+  background: #9a7b4e;
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 30px
+    rgba(80, 59, 27, 0.18);
+}
+
+
+.secondary-btn {
+  border:
+    1px solid #d6cdc2;
+
+  border-radius: 15px;
+
+  padding:
+    19px 28px;
+
+  background:
+    transparent;
+
+  color: #39342f;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.secondary-btn:hover {
+  background: #ffffff;
+
+  border-color: #9a7b4e;
+
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================
+   HERO STATS
+========================================= */
+
+.hero-stats {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0;
+
+  margin-top: 58px;
+}
+
+
+.hero-stats div {
+  min-width: 135px;
+
+  padding-right: 35px;
+
+  margin-right: 35px;
+
+  border-right:
+    1px solid #ded6cb;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.hero-stats div:last-child {
+  border-right: none;
+
+  margin-right: 0;
+}
+
+
+.hero-stats b {
+  color: #9a7b4e;
+
+  font-size: 28px;
+
+  font-weight: 900;
+}
+
+
+.hero-stats span {
+  color: #746d65;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HERO ART
+========================================= */
+
+.hero-art {
+  min-height: 600px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.hero-bg-circle {
+  width: 520px;
+
+  height: 520px;
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(213, 180, 125, 0.25),
+      rgba(213, 180, 125, 0.06),
+      transparent 70%
+    );
+
+  filter:
+    blur(10px);
+}
+
+
+.glow-orb {
+  width: 300px;
+
+  height: 300px;
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background:
+    rgba(210, 169, 100, 0.25);
+
+  filter:
+    blur(90px);
+}
+
+
+/* =========================================
+   PERFUME BOTTLE
+========================================= */
+
+.perfume-bottle {
+  width: 300px;
+
+  height: 390px;
+
+  position: relative;
+
+  margin-top: 60px;
+
+  border:
+    5px solid
+    rgba(255, 255, 255, 0.72);
+
+  border-radius:
+    65px 65px 75px 75px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.65),
+      rgba(227, 204, 163, 0.65)
+    );
+
+  box-shadow:
+    inset 0 0 40px
+    rgba(255, 255, 255, 0.8),
+
+    0 35px 60px
+    rgba(110, 80, 40, 0.15);
+
+  backdrop-filter:
+    blur(10px);
+
+  z-index: 2;
+}
+
+
+.perfume-bottle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 25px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.6);
+
+  border-radius: 45px;
+}
+
+
+/* =========================================
+   BOTTLE CAP
+========================================= */
+
+.bottle-cap {
+  width: 145px;
+
+  height: 90px;
+
+  position: absolute;
+
+  top: -95px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    20px 20px 5px 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #292522,
+      #4a433b
+    );
+
+  box-shadow:
+    0 15px 25px
+    rgba(40, 30, 20, 0.15);
+}
+
+
+.bottle-neck {
+  width: 110px;
+
+  height: 45px;
+
+  position: absolute;
+
+  top: -40px;
+
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  border-radius:
+    12px 12px 0 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c9a877,
+      #ead4a6,
+      #a47a43
+    );
+}
+
+
+/* =========================================
+   BOTTLE LABEL
+========================================= */
+
+.bottle-label {
+  width: 185px;
+
+  height: 185px;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 10px 30px
+    rgba(100, 80, 50, 0.1);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  color: #292522;
+
+  z-index: 3;
+}
+
+
+.bottle-label span {
+  color: #9a7b4e;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 6px;
+}
+
+
+.bottle-label strong {
+  font-size: 32px;
+
+  letter-spacing: 5px;
+}
+
+
+.bottle-label small {
+  color: #8c8176;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+
+/* =========================================
+   FLOATING NOTES
+========================================= */
+
+.float-note {
+  position: absolute;
+
+  z-index: 4;
+
+  padding:
+    13px 24px;
+
+  border:
+    1px solid
+    rgba(210, 200, 187, 0.9);
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.75);
+
+  color: #625b53;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 15px 30px
+    rgba(100, 80, 50, 0.08);
+
+  backdrop-filter:
+    blur(10px);
+
+  animation:
+    floating 4s ease-in-out infinite;
+}
+
+
+.note-1 {
+  top: 120px;
+
+  left: 0;
+}
+
+
+.note-2 {
+  top: 250px;
+
+  right: -10px;
+
+  animation-delay: 1s;
+}
+
+
+.note-3 {
+  bottom: 75px;
+
+  left: 30px;
+
+  animation-delay: 1.5s;
+}
+
+
+.note-4 {
+  bottom: 150px;
+
+  right: 0;
+
+  animation-delay: 2s;
+}
+
+
+@keyframes floating {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-12px);
+  }
+
+}
+
+
+/* =========================================
+   FEATURE STRIP
+========================================= */
+
+.feature-strip {
+  margin:
+    0 8%;
+
+  padding:
+    40px 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 35px;
+
+  border:
+    1px solid #e4dbcf;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+}
+
+
+.feature-step {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  padding:
+    10px 20px;
+}
+
+
+.step-number {
+  color: #b28d59;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+.feature-step h3 {
+  margin: 0 0 9px;
+
+  font-size: 19px;
+
+  color: #292522;
+}
+
+
+.feature-step p {
+  margin: 0;
+
+  color: #756d65;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   DISCOVERY SECTION
+========================================= */
+
+.dashboard-section-heading {
+  max-width: 850px;
+
+  margin:
+    130px auto 55px;
+
+  text-align: center;
+}
+
+
+.dashboard-section-heading p {
+  margin: 0 0 18px;
+
+  color: #9a7b4e;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+.dashboard-section-heading h2 {
+  margin: 0;
+
+  color: #292522;
+
+  font-size:
+    clamp(38px, 5vw, 60px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+
+.dashboard-section-heading h2 span {
+  color: #9a7b4e;
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-cards {
+  max-width: 1250px;
+
+  margin:
+    0 auto;
+
+  padding:
+    0 30px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.dashboard-card {
+  min-height: 340px;
+
+  padding: 35px;
+
+  border:
+    1px solid #e4dbcf;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255, 255, 255, 0.75);
+
+  cursor: pointer;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.dashboard-card:hover {
+  transform:
+    translateY(-10px);
+
+  border-color: #bfa078;
+
+  box-shadow:
+    0 25px 45px
+    rgba(80, 59, 27, 0.12);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+
+.card-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: #f0e6d7;
+
+  color: #9a7b4e;
+
+  font-size: 22px;
+}
+
+
+.card-top span {
+  color: #9a7b4e;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.dashboard-card h2 {
+  margin: 0;
+
+  color: #292522;
+
+  font-size: 28px;
+
+  letter-spacing: -0.8px;
+}
+
+
+.dashboard-card p {
+  margin:
+    20px 0 30px;
+
+  color: #746d65;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+.dashboard-card button {
+  margin-top: auto;
+
+  width: fit-content;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding:
+    13px 19px;
+
+  background: #292522;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.dashboard-card button:hover {
+  background: #9a7b4e;
+
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.dashboard-cta {
+  max-width: 1180px;
+
+  margin:
+    110px auto 100px;
+
+  padding:
+    55px 65px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #292522,
+      #3c342d
+    );
+
+  color: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  box-sizing: border-box;
+}
+
+
+.dashboard-cta p {
+  margin: 0 0 12px;
+
+  color: #c8a574;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+}
+
+
+.dashboard-cta h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size:
+    clamp(28px, 4vw, 45px);
+
+  line-height: 1.15;
+}
+
+
+.dashboard-cta button {
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding:
+    18px 28px;
+
+  background: #f7f4ee;
+
+  color: #292522;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.dashboard-cta button:hover {
+  background: #c8a574;
+
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .main-nav {
+    padding: 20px 5%;
+  }
+
+
+  .nav-links {
+    gap: 20px;
+  }
+
+
+  .hero-section {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 75px;
+
+    gap: 30px;
+  }
+
+
+  .hero-copy {
+    margin: 0 auto;
+  }
+
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+
+  .hero-text {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+
+  .hero-art {
+    min-height: 520px;
+  }
+
+
+  .dashboard-cards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .dashboard-card:last-child {
+    grid-column:
+      span 2;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .main-nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    padding:
+      20px 5%;
+  }
+
+
+  .brand {
+    min-width: auto;
+  }
+
+
+  .nav-actions {
+    min-width: auto;
+  }
+
+
+  .feature-strip {
+    grid-template-columns: 1fr;
+
+    margin:
+      0 5%;
+  }
+
+
+  .feature-step {
+    justify-content: center;
+  }
+
+
+  .dashboard-cta {
+    margin:
+      80px 30px;
+
+    padding: 45px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .main-nav {
+    min-height: auto;
+
+    padding:
+      18px 20px;
+
+    flex-direction: column;
+  }
+
+
+  .brand {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .nav-links {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+  }
+
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+
+  .nav-ai-link {
+    padding:
+      10px 16px;
+
+    font-size: 14px;
+  }
+
+
+  .nav-actions {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .nav-admin,
+  .logout-btn {
+    padding:
+      12px 17px;
+  }
+
+
+  .hero-section {
+    padding:
+      60px 22px 45px;
+  }
+
+
+  .eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .hero-copy h1 {
+    font-size: 54px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-text {
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  .hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+
+  .hero-stats {
+    gap: 0;
+
+    margin-top: 40px;
+  }
+
+
+  .hero-stats div {
+    min-width: 0;
+
+    width: 33%;
+
+    padding-right: 12px;
+
+    margin-right: 12px;
+  }
+
+
+  .hero-stats b {
+    font-size: 22px;
+  }
+
+
+  .hero-stats span {
+    font-size: 10px;
+  }
+
+
+  .hero-art {
+    min-height: 430px;
+
+    transform:
+      scale(0.82);
+  }
+
+
+  .feature-strip {
+    padding:
+      25px 15px;
+
+    margin:
+      0 16px;
+  }
+
+
+  .feature-step {
+    padding:
+      15px 10px;
+  }
+
+
+  .dashboard-section-heading {
+    margin:
+      80px 20px 40px;
+  }
+
+
+  .dashboard-section-heading h2 {
+    font-size: 38px;
+  }
+
+
+  .dashboard-cards {
+    padding:
+      0 16px;
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .dashboard-card {
+    min-height: 300px;
+  }
+
+
+  .dashboard-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+
+  .dashboard-cta {
+    margin:
+      70px 16px;
+
+    padding: 35px 25px;
+
+    align-items: stretch;
+  }
+
+
+  .dashboard-cta h2 {
+    font-size: 30px;
+  }
+
+
+  .dashboard-cta button {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,791 @@
+/* =========================================
+   GLOBAL RECOMMENDATIONS PAGE
+========================================= */
+
+.recommendations-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(218, 179, 118, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f8f5f0 0%,
+      #f3eee7 100%
+    );
+  color: #1d1b19;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.recommendations-navbar {
+  width: 100%;
+  min-height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.recommendations-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+
+.recommendations-logo-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1d1b19;
+  color: #d8b475;
+  font-size: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+.recommendations-logo h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+
+.recommendations-logo p {
+  margin: 3px 0 0;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #8b8178;
+}
+
+
+.recommendations-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.recommendations-nav-actions button {
+  border: none;
+  background: transparent;
+  color: #554e48;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+
+.recommendations-nav-actions button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+
+.recommendations-nav-actions .retake-nav-btn {
+  background: #1d1b19;
+  color: white;
+}
+
+
+.recommendations-nav-actions .retake-nav-btn:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.recommendations-hero {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 90px 7% 65px;
+  text-align: center;
+}
+
+
+.recommendations-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: rgba(218, 180, 117, 0.14);
+  border: 1px solid rgba(218, 180, 117, 0.28);
+  color: #8b642d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+
+.recommendations-hero h1 {
+  margin: 24px 0 18px;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  font-weight: 750;
+}
+
+
+.recommendations-hero h1 span {
+  color: #a9783b;
+}
+
+
+.recommendations-hero > p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #766d66;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   PREFERENCES SUMMARY
+========================================= */
+
+.preferences-summary {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.preference-pill {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #514a44;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   RESULTS SECTION
+========================================= */
+
+.results-section {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 7% 100px;
+}
+
+
+.results-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+
+.results-heading p {
+  margin: 0 0 9px;
+  color: #aa7b40;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+.results-heading h2 {
+  margin: 0;
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+
+
+.results-heading h2 span {
+  color: #a9783b;
+}
+
+
+.results-count {
+  padding: 12px 17px;
+  border-radius: 12px;
+  background: white;
+  color: #746a62;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   RECOMMENDATIONS GRID
+========================================= */
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+
+/* =========================================
+   PERFUME CARD
+========================================= */
+
+.recommendation-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 15px 40px rgba(48, 39, 31, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.recommendation-card:hover {
+  transform: translateY(-9px);
+  box-shadow:
+    0 28px 55px rgba(48, 39, 31, 0.14);
+}
+
+
+/* =========================================
+   RANK
+========================================= */
+
+.perfume-rank {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  z-index: 5;
+  min-width: 42px;
+  height: 32px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(20, 18, 16, 0.82);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.recommendation-image-container {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  background: #ece7e1;
+}
+
+
+.recommendation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+
+.recommendation-card:hover .recommendation-image {
+  transform: scale(1.07);
+}
+
+
+/* =========================================
+   MATCH BADGE
+========================================= */
+
+.match-badge {
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.match-badge span {
+  margin-top: 4px;
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+
+.excellent-match {
+  background: #247a4c;
+}
+
+
+.great-match {
+  background: #397c9d;
+}
+
+
+.good-match {
+  background: #a9783b;
+}
+
+
+.possible-match {
+  background: #77716b;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.recommendation-content {
+  padding: 26px;
+}
+
+
+.perfume-brand {
+  margin-bottom: 8px;
+  color: #a9783b;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+
+.recommendation-content h3 {
+  margin: 0 0 12px;
+  font-size: 27px;
+  letter-spacing: -0.8px;
+  color: #1e1b18;
+}
+
+
+.perfume-description {
+  margin: 0;
+  color: #776e67;
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 72px;
+}
+
+
+/* =========================================
+   MATCH LABEL
+========================================= */
+
+.match-label {
+  margin-top: 18px;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f7f1e8;
+  color: #946a32;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   AI EXPLANATION
+========================================= */
+
+.ai-explanation {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(217, 180, 118, 0.12),
+      rgba(255, 255, 255, 0.9)
+    );
+  border:
+    1px solid
+    rgba(174, 126, 61, 0.15);
+}
+
+
+.ai-explanation-title {
+  margin-bottom: 8px;
+  color: #8c6330;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+
+.ai-explanation p {
+  margin: 0;
+  color: #6c635c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   SCORE DETAILS
+========================================= */
+
+.score-details {
+  margin-top: 22px;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 10px;
+  border-top:
+    1px solid
+    rgba(0, 0, 0, 0.06);
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.06);
+}
+
+
+.score-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.score-details span {
+  color: #91877f;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+
+.score-details strong {
+  color: #2a2622;
+  font-size: 16px;
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.recommendation-footer {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.perfume-price {
+  font-size: 19px;
+  font-weight: 750;
+  color: #1f1b18;
+}
+
+
+.recommendation-footer button {
+  border: none;
+  padding: 11px 15px;
+  border-radius: 10px;
+  background: #1d1b19;
+  color: white;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+
+.recommendation-footer button span {
+  margin-left: 7px;
+  transition: 0.25s ease;
+}
+
+
+.recommendation-footer button:hover {
+  background: #000;
+}
+
+
+.recommendation-footer button:hover span {
+  margin-left: 11px;
+}
+
+
+/* =========================================
+   RETAKE SECTION
+========================================= */
+
+.retake-section {
+  margin-top: 65px;
+  padding: 38px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #25211e,
+      #3b322b
+    );
+  color: white;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+.retake-section p {
+  margin: 0 0 7px;
+  color: #d8c7b3;
+  font-size: 13px;
+}
+
+
+.retake-section h3 {
+  margin: 0;
+  font-size: 23px;
+  letter-spacing: -0.5px;
+}
+
+
+.retake-section button {
+  border: none;
+  background: #d8ad70;
+  color: #251f1a;
+  padding: 15px 22px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+
+.retake-section button:hover {
+  transform: translateY(-2px);
+}
+
+
+.retake-section button span {
+  margin-left: 8px;
+}
+
+
+/* =========================================
+   NO RESULTS PAGE
+========================================= */
+
+.no-results-container {
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.no-results-container h1 {
+  margin: 0 0 15px;
+  font-size: 42px;
+}
+
+
+.no-results-container p {
+  max-width: 500px;
+  color: #766d66;
+  line-height: 1.7;
+}
+
+
+.quiz-again-btn {
+  margin-top: 25px;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 12px;
+  background: #1d1b19;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+
+.quiz-again-btn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .recommendations-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .recommendations-navbar {
+    padding: 15px 5%;
+    min-height: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+
+  .recommendations-nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  .recommendations-hero {
+    padding:
+      65px 5%
+      45px;
+  }
+
+
+  .recommendations-hero h1 {
+    font-size: 43px;
+    letter-spacing: -1.5px;
+  }
+
+
+  .recommendations-hero > p {
+    font-size: 15px;
+  }
+
+
+  .results-section {
+    padding:
+      20px 5%
+      70px;
+  }
+
+
+  .results-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+
+  .results-heading h2 {
+    font-size: 35px;
+  }
+
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .recommendation-image-container {
+    height: 310px;
+  }
+
+
+  .retake-section {
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .retake-section button {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .recommendations-nav-actions button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+
+  .recommendation-content {
+    padding: 21px;
+  }
+
+
+  .recommendation-image-container {
+    height: 260px;
+  }
+
+
+  .recommendations-hero h1 {
+    font-size: 37px;
+  }
+
+}

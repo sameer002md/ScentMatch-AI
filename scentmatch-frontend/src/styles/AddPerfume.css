@@ -1,0 +1,756 @@
+/* =========================================
+   ADD PERFUME PAGE
+========================================= */
+
+.add-perfume-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(176, 138, 88, 0.12),
+      transparent 30%
+    ),
+    #f7f5f2;
+
+  color: #1d1b19;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.add-perfume-header {
+  height: 82px;
+
+  background: #181716;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 7%;
+
+  color: white;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.add-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  cursor: pointer;
+}
+
+
+.brand-icon {
+  width: 46px;
+
+  height: 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b08a58,
+      #d6b784
+    );
+
+  color: #1b1917;
+
+  font-size: 20px;
+}
+
+
+.add-brand h2 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+
+.add-brand p {
+  margin: 4px 0 0;
+
+  color: #aaa39b;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+
+.back-admin-btn {
+  padding: 11px 18px;
+
+  background: transparent;
+
+  color: white;
+
+  border:
+    1px solid #4c4843;
+
+  border-radius: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.back-admin-btn:hover {
+  background: white;
+
+  color: #1d1b19;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.add-perfume-main {
+  width: min(1100px, 90%);
+
+  margin: auto;
+
+  padding:
+    70px 0
+    90px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.add-perfume-title {
+  margin-bottom: 38px;
+}
+
+
+.add-perfume-title > p {
+  margin: 0 0 12px;
+
+  color: #a17d4d;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+.add-perfume-title h1 {
+  margin: 0;
+
+  font-size: clamp(
+    42px,
+    5vw,
+    62px
+  );
+
+  letter-spacing: -2px;
+
+  line-height: 1.05;
+}
+
+
+.add-perfume-title h1 span {
+  color: #a17d4d;
+}
+
+
+.add-perfume-title h3 {
+  margin:
+    16px 0
+    0;
+
+  color: #77716a;
+
+  font-size: 17px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.perfume-form {
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid #e8e1d7;
+
+  border-radius: 24px;
+
+  padding: 42px;
+
+  box-shadow:
+    0 18px 60px
+    rgba(54, 39, 20, 0.07);
+}
+
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.form-section {
+  padding-bottom: 32px;
+
+  margin-bottom: 32px;
+
+  border-bottom:
+    1px solid #eee8e0;
+}
+
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+
+.form-section h2 {
+  margin:
+    0 0
+    22px;
+
+  font-size: 22px;
+
+  color: #22201d;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.full-width,
+.wide {
+  grid-column:
+    1 / -1;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.form-group label {
+  margin-bottom: 9px;
+
+  color: #37332e;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border:
+    1px solid #ddd5ca;
+
+  background: white;
+
+  color: #24211e;
+
+  border-radius: 11px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 90px;
+
+  line-height: 1.6;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa39a;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:
+    #a17d4d;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(161, 125, 77, 0.12);
+}
+
+
+/* =========================================
+   IMAGE UPLOAD
+========================================= */
+
+/*
+   Hide the default ugly file input
+*/
+
+.image-upload-input {
+  display: none;
+}
+
+
+/*
+   Browse image container
+*/
+
+.image-upload-area {
+  width: 100%;
+
+  min-height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border:
+    2px dashed #d7c6b2;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf8f5,
+      #f5f0ea
+    );
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.image-upload-area:hover {
+  border-color: #a17d4d;
+
+  background: #f8f3ec;
+
+  transform:
+    translateY(-1px);
+}
+
+
+.upload-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(161, 125, 77, 0.12);
+
+  color: #a17d4d;
+
+  font-size: 24px;
+}
+
+
+.upload-text {
+  margin: 0;
+
+  color: #3c3732;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.upload-subtext {
+  margin: 0;
+
+  color: #8b837a;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   IMAGE PREVIEW
+========================================= */
+
+.image-preview-container {
+  width: 100%;
+
+  margin-top: 15px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+.image-preview {
+  width: 180px;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  border:
+    1px solid #e2d8cc;
+
+  background: #f3eee7;
+
+  box-shadow:
+    0 10px 25px
+    rgba(40, 30, 20, 0.12);
+}
+
+
+/* =========================================
+   CHANGE IMAGE BUTTON
+========================================= */
+
+.change-image-btn {
+  margin-top: 15px;
+
+  padding: 10px 18px;
+
+  border:
+    1px solid #d5c7b8;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #5d5146;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.change-image-btn:hover {
+  background: #f6f1eb;
+
+  border-color: #a17d4d;
+}
+
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.success-message {
+  margin-top: 20px;
+
+  padding: 15px 18px;
+
+  background: #edf8ef;
+
+  color: #25743a;
+
+  border:
+    1px solid #cce9d2;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error-message {
+  margin-top: 20px;
+
+  padding: 15px 18px;
+
+  background: #fff0ee;
+
+  color: #b43d2f;
+
+  border:
+    1px solid #f0c7c1;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 14px;
+
+  margin-top: 15px;
+}
+
+
+.cancel-btn {
+  padding: 13px 24px;
+
+  background: white;
+
+  color: #3a3530;
+
+  border:
+    1px solid #d8d0c5;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.cancel-btn:hover {
+  background: #f6f3ee;
+}
+
+
+.submit-perfume-btn {
+  padding: 13px 26px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #24211e,
+      #3a342d
+    );
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+
+  box-shadow:
+    0 8px 20px
+    rgba(20, 18, 15, 0.18);
+}
+
+
+.submit-perfume-btn:hover:not(:disabled) {
+  transform:
+    translateY(-2px);
+}
+
+
+.submit-perfume-btn:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .add-perfume-header {
+    padding:
+      0 5%;
+  }
+
+
+  .add-perfume-main {
+    width: 92%;
+
+    padding:
+      55px 0
+      70px;
+  }
+
+
+  .perfume-form {
+    padding: 30px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .add-perfume-header {
+    height: 72px;
+  }
+
+
+  .add-brand p {
+    display: none;
+  }
+
+
+  .back-admin-btn {
+    padding:
+      9px 12px;
+
+    font-size: 12px;
+  }
+
+
+  .add-perfume-main {
+    width: 90%;
+
+    padding:
+      45px 0
+      60px;
+  }
+
+
+  .add-perfume-title h1 {
+    font-size: 40px;
+  }
+
+
+  .perfume-form {
+    padding: 22px;
+
+    border-radius: 18px;
+  }
+
+
+  .form-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .wide {
+    grid-column: auto;
+  }
+
+
+  .form-actions {
+    flex-direction:
+      column-reverse;
+  }
+
+
+  .cancel-btn,
+  .submit-perfume-btn {
+    width: 100%;
+  }
+
+
+  .image-preview {
+    width: 150px;
+
+    height: 190px;
+  }
+
+
+  .image-upload-area {
+    min-height: 150px;
+  }
+
+}

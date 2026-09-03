@@ -1,0 +1,43 @@
+# ==============================
+# FRONTEND
+# ==============================
+
+scentmatch-frontend/node_modules/
+scentmatch-frontend/dist/
+scentmatch-frontend/.env
+scentmatch-frontend/.env.*
+
+# ==============================
+# BACKEND
+# ==============================
+
+scentmatch-backend/target/
+scentmatch-backend/uploads/
+
+# Local secret configuration
+scentmatch-backend/src/main/resources/application-local.properties
+
+# Environment files
+.env
+.env.*
+
+# ==============================
+# SECRET FILES
+# ==============================
+
+secret key.txt
+*.key
+
+# ==============================
+# IDE
+# ==============================
+
+.vscode/
+.idea/
+
+# ==============================
+# SYSTEM FILES
+# ==============================
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,129 @@
+.preferences-page {
+  min-height: 100vh;
+  padding: 35px 7%;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(201, 167, 121, 0.12), transparent 25%),
+    radial-gradient(circle at 90% 90%, rgba(154, 122, 77, 0.08), transparent 28%),
+    #f7f4ee;
+}
+
+.preference-card {
+  width: min(760px, 100%);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 42px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e7dfd5;
+  border-radius: 26px;
+  box-shadow:
+    0 20px 55px rgba(70, 50, 25, 0.08),
+    0 5px 18px rgba(70, 50, 25, 0.04);
+}
+
+.preference-card h2 {
+  margin: 0;
+  color: #222;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+  margin: 30px 0;
+}
+
+.choice {
+  min-height: 58px;
+  padding: 14px 8px;
+  background: #fff;
+  color: #4d4842;
+  border: 1px solid #ddd3c7;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.choice:hover {
+  transform: translateY(-3px);
+  border-color: #b89d78;
+  box-shadow: 0 8px 18px rgba(70, 50, 25, 0.08);
+}
+
+.choice.active {
+  background: linear-gradient(135deg, #222, #3a332b);
+  color: #fff;
+  border-color: #222;
+  box-shadow: 0 8px 18px rgba(34, 34, 34, 0.14);
+}
+
+.choice.active:hover {
+  border-color: #9a7b4e;
+  background: linear-gradient(135deg, #9a7b4e, #6f5535);
+}
+
+.save-preferences {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #9a7b4e, #7c603c);
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(154, 123, 78, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.save-preferences:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #222, #3a332b);
+  box-shadow: 0 14px 28px rgba(34, 34, 34, 0.18);
+}
+
+.save-preferences:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .preferences-page {
+    padding: 30px 5%;
+  }
+
+  .preference-card {
+    padding: 30px 24px;
+    border-radius: 22px;
+  }
+
+  .choice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .preference-card {
+    padding: 25px 18px;
+  }
+
+  .preference-card h2 {
+    font-size: 21px;
+  }
+
+  .choice {
+    min-height: 54px;
+    font-size: 12px;
+  }
+}
